@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+appointments
+{% endblock %}
+
+{% block main %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Description</th>
+        <th scope="col">Feelings</th>
+        <th scope="col">Location</th>
+        <th scope="col">Severity</th>
+        <th scope="col">Specialty</th>
+        <th scope="col">Doctor</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for case in cases %}
+        <tr id="case-id_{{case.id}}">
+            <th scope="row">{{loop.index}}</th>
+            <td>{{case.description}}</td>
+            <td>{{case.feelings}}</td>
+            <td>{{case.location}}</td>
+            <td>{{case.severity}}</td>
+            <td>
+                <select class="form-select" name="specialty" id="specialty_{{loop.index}}" required="">
+                    <option selected="" disabled="" value="">Choose doctor specialty</option>
+                    {% for specialty in specialties %}
+                    <option value="{{specialty.id}}">{{ specialty.specialty }}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td>
+                <select class="form-select" name="doctor" id="doctor_{{loop.index}}" required="">
+                    <option selected="" disabled="" value="">Choose doctor</option>
+                </select>
+            </td>
+            <td id="bookButton_{{loop.index}}">
+                <button class="btn btn-primary" type="submit" disabled>Book appointment</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+  <h3 id="doctorSelected">No doctor selected</h3>
+  <div id="calendar"></div>
+ 
+{% endblock %}

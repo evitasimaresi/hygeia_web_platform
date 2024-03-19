@@ -1,0 +1,444 @@
+{
+    "Patient": [
+        {
+            "username": "alice_smith",
+            "email": "alice_smith@example.com",
+            "password": "scrypt:32768:8:1$HLo06O1yWVJZLIvR$20a739bca028905deac5be4b1af1f7577c3789dfc3f7ec771996b0d9638c232da981d58825162ec02ca8700dcdfe91eb7f328dbc3d0797e2f4f4bd3e3221f43d"
+        },
+        {
+            "username": "bob_jones",
+            "email": "bob_jones@example.com",
+            "password": "scrypt:32768:8:1$kkpAgEIt2nTPOKqa$a75076ef48afe969b96170f08a70fde55cae41cfe1f335e5f28a5735908d7c9513e10655e916671440e2acc2760f202fdda6e57e40d602ad0add8d96927071da"
+        },
+        {
+            "username": "emma_doe",
+            "email": "emma_doe@example.com",
+            "password": "scrypt:32768:8:1$KUyE7yasxWofiiwc$0e108f92e817da7ab9898cb3f2ede6af3f82471fd49756e1c9256699b202a7d8a7d3323e7234970dd9e6157164175d5ef5e39451db7029e5384b713d6a2d3269"
+        },
+        {
+            "username": "max_rodriguez",
+            "email": "max_rodriguez@example.com",
+            "password": "scrypt:32768:8:1$AbcmJjKcv05bVIlY$5a924dec1fb66541771d8bc8daea2130e13e3fb6b8567f6def7d400d7b7ad104631e8d6b76a457b4b8708cec5b58260ff5085d46c20a147d4707a9193d7cf42e"
+        },
+        {
+            "username": "sara_taylor",
+            "email": "sara_taylor@example.com",
+            "password": "scrypt:32768:8:1$hkNyzgSaKNgZI2pU$54dad50cb361513738ac9cd34faad07be008a4e1ebaaf279949d7027291e1f9c13d222407ad10358cc9c14c737a774ac0ff16b6ac4dca832f846624e89a16ad9"
+        },
+        {
+            "username": "marina_ns",
+            "email": "marina_ns@mail.com",
+            "password": "scrypt:32768:8:1$7Tdt18FcgaH3245M$07ec6f12e1b81316dcddeee984b5df8517b664315a7f45e18f80a30aa450d9b45c208946a9e973e9b44bbc0095a8a6b6ddaa3efaa460dfd6686b3c3ac4867c95"
+        }
+    ],
+    "Doctor": [
+        {
+            "specialty_id": 1,
+            "username": "dr_chloe",
+            "email": "dr_chloe@example.com",
+            "password": "scrypt:32768:8:1$tidhnZ4bSSTYqSmA$e62d24c850b12446cf0428250abb8d8b07be9bc698bfbac12b7280c0af1960126357aff2a8092d49de06235f4adbb6a8357184adb4465bd2bf615efb5d7c0bb4"
+        },
+        {
+            "specialty_id": 12,
+            "username": "dr_eric",
+            "email": "dr_eric@example.com",
+            "password": "scrypt:32768:8:1$tY9tdSWwyZrvPpr4$7090cfbd27b0149c2df37c0922d6b9cf8ef2f750fcc56d98b4bfc2f2232672127d4600f609789ddc1d578ae7622781d94053d6d2dbe325b926900d4b8309946e"
+        },
+        {
+            "specialty_id": 17,
+            "username": "dr_lisa",
+            "email": "dr_lisa@example.com",
+            "password": "scrypt:32768:8:1$re8ANiHIOoEdxqaP$a2143d344f80c63e5fa16c2cf58c8946b619c1f775dc47f5ebeb76929369c2758416764073b15fe2eabab763b56e5d3cacee6ad515067806d77a67112019fd78"
+        },
+        {
+            "specialty_id": 22,
+            "username": "dr_ryan",
+            "email": "dr_ryan@example.com",
+            "password": "scrypt:32768:8:1$rKL78sWhdSQBEknU$26be7e311505f1f9418dd24bec38e3d6d8ecf75dc98429215391027b4635994bcf47c941bb9b21905f5c923ca1f1e34dafffbd3bc0efdc96c025d52995c02eed"
+        },
+        {
+            "specialty_id": 26,
+            "username": "dr_zoe",
+            "email": "dr_zoe@example.com",
+            "password": "scrypt:32768:8:1$gtQ0uwQ9xYLF11Ug$54be45709ffd66ddd243e87d6e8eaa6d8d2ab258e6f8137c7c06f5475578ed837eb88f7fe5fb4fe2a0b777bdef3ed13f0e2e3e08bd10beb8ee6c8f202b79a2b3"
+        }
+    ],
+    "Case": [
+        {
+            "description": "Back Pain",
+            "feelings": "Aching and stiffness",
+            "location": "Lower back",
+            "severity": 2,
+            "handled": true,
+            "patient_id": 1
+        },
+        {
+            "description": "Dry Skin",
+            "feelings": "Flaky and rough patches",
+            "location": "Skin",
+            "severity": 1,
+            "handled": true,
+            "patient_id": 1
+        },
+        {
+            "description": "Thyroid Checkup",
+            "feelings": "Fatigue and weight gain",
+            "location": "Throat",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 1
+        },
+        {
+            "description": "Sprained Ankle",
+            "feelings": "Swelling and tenderness",
+            "location": "Ankle",
+            "severity": 2,
+            "handled": true,
+            "patient_id": 1
+        },
+        {
+            "description": "Corneal Abrasion",
+            "feelings": "Eye pain and sensitivity to light",
+            "location": "Eye",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 1
+        },
+        {
+            "description": "Depression",
+            "feelings": "Hopelessness and sadness",
+            "location": "Mind",
+            "severity": 5,
+            "handled": true,
+            "patient_id": 2
+        },
+        {
+            "description": "Stomach Ulcer",
+            "feelings": "Persistent abdominal pain",
+            "location": "Stomach",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 2
+        },
+        {
+            "description": "Broken Leg",
+            "feelings": "Sharp pain and inability to walk",
+            "location": "Leg",
+            "severity": 5,
+            "handled": true,
+            "patient_id": 2
+        },
+        {
+            "description": "Concussion",
+            "feelings": "Headache and confusion",
+            "location": "Head",
+            "severity": 4,
+            "handled": true,
+            "patient_id": 2
+        },
+        {
+            "description": "Gout Attack",
+            "feelings": "Sudden and severe joint pain",
+            "location": "Joints",
+            "severity": 4,
+            "handled": true,
+            "patient_id": 2
+        },
+        {
+            "description": "Pneumonia",
+            "feelings": "Chest pain and difficulty breathing",
+            "location": "Lungs",
+            "severity": 5,
+            "handled": true,
+            "patient_id": 3
+        },
+        {
+            "description": "Kidney Stones",
+            "feelings": "Severe pain in the back and abdomen",
+            "location": "Kidneys",
+            "severity": 4,
+            "handled": true,
+            "patient_id": 3
+        },
+        {
+            "description": "Anemia",
+            "feelings": "Fatigue and weakness",
+            "location": "Blood",
+            "severity": 2,
+            "handled": true,
+            "patient_id": 3
+        },
+        {
+            "description": "Cataracts",
+            "feelings": "Blurred vision and difficulty seeing at night",
+            "location": "Eyes",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 3
+        },
+        {
+            "description": "UTI (Urinary Tract Infection)",
+            "feelings": "Burning sensation during urination and frequent urge to urinate",
+            "location": "Urinary tract",
+            "severity": 2,
+            "handled": true,
+            "patient_id": 3
+        },
+        {
+            "description": "Gallstones",
+            "feelings": "Abdominal pain and nausea",
+            "location": "Gallbladder",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 4
+        },
+        {
+            "description": "Sinusitis",
+            "feelings": "Nasal congestion and facial pressure",
+            "location": "Sinuses",
+            "severity": 2,
+            "handled": true,
+            "patient_id": 4
+        },
+        {
+            "description": "Arthritis",
+            "feelings": "Joint pain and stiffness",
+            "location": "Joints",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 4
+        },
+        {
+            "description": "Appendicitis",
+            "feelings": "Abdominal pain starting around the navel and moving to the lower right side",
+            "location": "Appendix",
+            "severity": 5,
+            "handled": true,
+            "patient_id": 4
+        },
+        {
+            "description": "Plantar Fasciitis",
+            "feelings": "Heel pain and stiffness in the morning",
+            "location": "Foot",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 4
+        },
+        {
+            "description": "Asthma Attack",
+            "feelings": "Wheezing and shortness of breath",
+            "location": "Lungs",
+            "severity": 4,
+            "handled": true,
+            "patient_id": 5
+        },
+        {
+            "description": "Gastritis",
+            "feelings": "Abdominal pain and nausea",
+            "location": "Stomach",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 5
+        },
+        {
+            "description": "Bronchitis",
+            "feelings": "Cough with mucus and chest discomfort",
+            "location": "Lungs",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 5
+        },
+        {
+            "description": "Tension Headache",
+            "feelings": "Mild to moderate head pain with a sensation of tightness or pressure",
+            "location": "Head",
+            "severity": 2,
+            "handled": true,
+            "patient_id": 5
+        },
+        {
+            "description": "Carpal Tunnel Syndrome",
+            "feelings": "Numbness, tingling, and weakness in the hand",
+            "location": "Wrist",
+            "severity": 3,
+            "handled": true,
+            "patient_id": 5
+        },
+        {
+            "description": "Migraine",
+            "feelings": "Throbbing headache",
+            "location": "Head",
+            "severity": 4,
+            "handled": false,
+            "patient_id": 1
+        },
+        {
+            "description": "Rash on Arm",
+            "feelings": "Itchy and red patches",
+            "location": "Arm",
+            "severity": 2,
+            "handled": false,
+            "patient_id": 2
+        },
+        {
+            "description": "Diabetes Management",
+            "feelings": "Fatigue and excessive thirst",
+            "location": "Body",
+            "severity": 3,
+            "handled": false,
+            "patient_id": 3
+        },
+        {
+            "description": "Knee Pain",
+            "feelings": "Stiffness and swelling",
+            "location": "Knee",
+            "severity": 3,
+            "handled": false,
+            "patient_id": 4
+        },
+        {
+            "description": "Anxiety",
+            "feelings": "Nervousness and panic attacks",
+            "location": "Mind",
+            "severity": 4,
+            "handled": false,
+            "patient_id": 5
+        },
+        {
+            "description": "chest pain",
+            "feelings": "pressure and tightness",
+            "location": "chest",
+            "severity": 4,
+            "handled": false,
+            "patient_id": 6
+        }
+    ],
+    "Appointments": [
+        {
+            "datetime": "2024-03-11T09:00:00",
+            "case_id": 6,
+            "doctor_id": 1
+        },
+        {
+            "datetime": "2024-03-13T10:00:00",
+            "case_id": 7,
+            "doctor_id": 1
+        },
+        {
+            "datetime": "2024-03-11T11:00:00",
+            "case_id": 8,
+            "doctor_id": 1
+        },
+        {
+            "datetime": "2024-03-14T12:00:00",
+            "case_id": 9,
+            "doctor_id": 1
+        },
+        {
+            "datetime": "2024-03-15T13:00:00",
+            "case_id": 10,
+            "doctor_id": 1
+        },
+        {
+            "datetime": "2024-03-06T14:00:00",
+            "case_id": 11,
+            "doctor_id": 2
+        },
+        {
+            "datetime": "2024-03-07T15:00:00",
+            "case_id": 12,
+            "doctor_id": 2
+        },
+        {
+            "datetime": "2024-03-08T16:00:00",
+            "case_id": 13,
+            "doctor_id": 2
+        },
+        {
+            "datetime": "2024-03-11T12:00:00",
+            "case_id": 14,
+            "doctor_id": 2
+        },
+        {
+            "datetime": "2024-03-12T09:00:00",
+            "case_id": 15,
+            "doctor_id": 2
+        },
+        {
+            "datetime": "2024-03-11T10:00:00",
+            "case_id": 16,
+            "doctor_id": 3
+        },
+        {
+            "datetime": "2024-03-12T11:00:00",
+            "case_id": 17,
+            "doctor_id": 3
+        },
+        {
+            "datetime": "2024-03-13T12:00:00",
+            "case_id": 18,
+            "doctor_id": 3
+        },
+        {
+            "datetime": "2024-03-14T13:00:00",
+            "case_id": 19,
+            "doctor_id": 3
+        },
+        {
+            "datetime": "2024-03-15T14:00:00",
+            "case_id": 1,
+            "doctor_id": 3
+        },
+        {
+            "datetime": "2024-03-18T15:00:00",
+            "case_id": 2,
+            "doctor_id": 4
+        },
+        {
+            "datetime": "2024-03-19T16:00:00",
+            "case_id": 3,
+            "doctor_id": 4
+        },
+        {
+            "datetime": "2024-03-18T11:00:00",
+            "case_id": 4,
+            "doctor_id": 4
+        },
+        {
+            "datetime": "2024-03-19T09:00:00",
+            "case_id": 5,
+            "doctor_id": 4
+        },
+        {
+            "datetime": "2024-03-20T10:00:00",
+            "case_id": 20,
+            "doctor_id": 4
+        },
+        {
+            "datetime": "2024-03-21T11:00:00",
+            "case_id": 21,
+            "doctor_id": 5
+        },
+        {
+            "datetime": "2024-03-22T12:00:00",
+            "case_id": 22,
+            "doctor_id": 5
+        },
+        {
+            "datetime": "2024-03-25T13:00:00",
+            "case_id": 23,
+            "doctor_id": 5
+        },
+        {
+            "datetime": "2024-03-26T14:00:00",
+            "case_id": 24,
+            "doctor_id": 5
+        },
+        {
+            "datetime": "2024-03-25T15:00:00",
+            "case_id": 25,
+            "doctor_id": 5
+        }
+    ]
+}
+

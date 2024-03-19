@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+chat
+{% endblock %}
+
+{% block main %}
+<form class="chat-cls" action="{{url_for('chat')}}" method="POST">
+    {{ form.hidden_tag() }}
+    <div class="input-group mb-3">
+        <!-- <span class="input-group-text" id="basic-addon1">{{ form.description.label }}</span> -->
+        <input type="text" class="form-control" name="description" aria-label="description"
+            aria-describedby="basic-addon1" placeholder="Desciption">
+    </div>
+    <div class="input-group mb-3">
+        <!-- <span class="input-group-text" id="basic-addon1">{{ form.feelings.label }}</span> -->
+        <input type="text" class="form-control" name="feelings" aria-label="feelings" aria-describedby="basic-addon1"
+            placeholder="Feelings">
+    </div>
+    <div class="input-group mb-3">
+        <!-- <span class="input-group-text" id="basic-addon1">{{ form.location.label }}</span> -->
+        <input type="text" class="form-control" name="location" aria-label="location" aria-describedby="basic-addon1"
+            placeholder="Location">
+    </div>
+    <div class="input-group mb-3 align-items-center">
+        <div class="col-auto ">
+            <span class="input-group-text" id="basic-addon1">{{form.severity.label}}</span>
+        </div>
+        <div class="col ">
+            <input type="range" class="form-range" name="severity" min="1" max="5" step="1" id="customRange">
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-primary col-12" type="submit">Save case</button>
+    </div>
+</form>
+{% endblock %}

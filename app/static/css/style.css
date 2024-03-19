@@ -1,0 +1,472 @@
+/* * {
+   border: 1px solid red;
+} */
+
+/* body {
+    background-color: yellowgreen;
+} */
+
+:root {
+    --black: #000000;
+    --hight-light-color: rgba(255, 255, 255, 0.7);
+    --color: rgb(0, 255, 170);
+    --border-width: 1px;
+}
+
+::selection {
+    color: var(--black);
+    background: var(--color);
+ }
+
+ .alert-primary {
+    color: var(--black);
+    background-color:var(--hight-light-color);
+    border-color: var(--black);
+    border-radius: 0;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.highlight-text {
+    background-color: var(--color);
+}
+
+/* ------ */
+/* Fonts */
+/* ---- */
+* {
+    font-family: "Nunito Sans", sans-serif;
+}
+
+/* -------- */
+/* Navbar */
+/* ------ */
+/* Navbar logo */
+.navbar-brand {
+    font-weight: 1000;
+    font-size: 50px;
+    padding: 0;
+}
+
+.navbar {
+    --bs-bg-opacity: 1;
+    background-color: rgba(173, 17, 17, 0) !important;
+    padding: 0;
+    border: none !important;
+}
+
+/* -------- */
+/* Buttons */
+/* ------ */
+.btn,
+.btn-primary {
+    background: none;
+    border-width: var(--border-width);
+    border-color: var(--black);
+    border-radius: 0px;
+    color: var(--black);
+}
+
+.btn-check:checked+.btn-outline-primary {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn.btn-primary:focus,
+.btn-check:checked+.btn-outline-primary,
+.btn-check:hover+.btn-outline-primary,
+.btn-primary:checked,
+.btn-primary:hover,
+.btn-primary:disabled,
+.btn-primary:focus,
+.btn-check:focus,
+.btn-outline-primary:focus {
+    background-color: var(--black);
+    border-width: var(--border-width);
+    border-color: var(--black);
+    outline: none !important;
+    box-shadow: none;
+}
+
+.btn-primary:disabled {
+    background-color: transparent;
+}
+
+.input-group-text,
+.disabled-btn,
+.user-btn,
+.user-btn:checked {
+    background: none;
+    border: none !important;
+    outline: none !important;
+}
+
+/* register/login buttons */
+.authorise-btn {
+    box-shadow: none;
+    font-weight: 1000;
+    font-size: 30px;
+    border: none;
+    color: rgb(105, 105, 105);
+    /* color: var(--hight-light-color); */
+    padding: 150px 10px 30px 0;
+}
+
+.reg-login-btn {
+    padding-left: 33vw;
+}
+
+.btn-check:checked+.authorise-btn,
+.btn-check:hover+.authorise-btn {
+    color: var(--black);
+    background-color: rgba(129, 0, 234, 0);
+}
+
+.btn-group {
+    max-width: 200px;
+}
+
+/* ------ */
+/* Forms */
+/* ---- */
+/* Register - Login form */
+.row,
+.chat-cls {
+    padding: 10px 20vw 0 33vw;
+    /* min-width: 500px; */
+}
+
+.form-select,
+.form-select:active,
+.form-select:focus,
+.form-control,
+.form-control:active,
+.form-control:focus,
+.form-control:checked {
+    border-radius: 0px;
+    box-shadow: none;
+    border-width: 0 0 var(--border-width);
+    border-color: var(--black);
+    background-color: transparent;
+}
+
+/* For autosave fillers in forms */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    /* border: 1px solid rgb(0, 0, 0); */
+    -webkit-text-fill-color: var(--black);
+    /* -webkit-box-shadow: 0 0 0px 1000px #000 inset; */
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+/* Range */
+.form-range {
+    padding: 0 0 0 10px;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: var(--border-width);
+    background: var(--black);
+    border: none;
+    border-radius: 0;
+}
+
+/* Change the appearance of the thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 0px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    margin: -15px 10px 10px 0px;
+    box-shadow: none !important;
+}
+
+/* Change the appearance of the thumb when hovered */
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: var(--hight-light-color);
+}
+
+/* ------ */
+/* Table */
+/* ---- */
+td,
+th {
+    border-style: none;
+}
+
+#moreInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appoint-details td b {
+    display: block;
+    /* width: 140px; */
+    text-align: right;
+    font-weight: 1000;
+    margin: 0 10px 0 0vw;
+}
+
+.th_history {
+    width: 20vw;
+}
+
+.button_history {
+    width: 180px;
+}
+
+/* .table_history td{
+    width: 200px;
+    word-wrap: break-word;
+}
+
+/* ----- */
+/* Text */
+/* --- */
+#doctorSelected {
+    margin: 50px 0 35px 0;
+    padding: 10px 10px 10px 10px;
+    font-weight: 100;
+    font-size: 20px;
+    border: 1px solid var(--black);
+}
+
+.upcoming-text,
+h4 {
+    font-weight: 1000;
+    font-size: 30px;
+    text-align: center;
+    color: var(--black);
+    border: 1px solid black;
+    margin: 5px 0 0 0;
+}
+
+.welcome-msg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    font-size: 20px;
+    /* width: 500px; */
+}
+
+.link:hover {
+    color: var(--black);
+    font-weight: 1000;
+}
+
+.link {
+    color: var(--color);
+    text-decoration: none;
+    font-weight: 1000;
+}
+
+/* --------- */
+/* Calendar */
+/* ------- */
+#calendar {
+    margin: 0 0 0 0;
+}
+
+#calendar_index {
+    max-width: 600px;
+}
+
+.fc-list,
+.fc-list-sticky,
+.fc-listMonth-view,
+.fc-view,
+.fc-scroller {
+    border: 1px solid #ffffff !important;
+}
+
+.fc-toolbar .fc-today-button,
+.fc-toolbar .fc-prev-button,
+.fc-toolbar .fc-next-button {
+    background-color: white !important;
+    color: rgb(0, 0, 0) !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
+
+.fc-toolbar .fc-today-button:hover,
+.fc-toolbar .fc-prev-button:hover,
+.fc-toolbar .fc-next-button:hover {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(0, 0, 0) !important;
+    border-color: #000000 !important;
+}
+
+.fc-toolbar.fc-header-toolbar {
+    margin: 25px 0 0 0 !important;
+}
+
+.fc-toolbar-title {
+    font-size: 15pt !important;
+    font-weight: 800;
+}
+
+.fc-list-empty {
+    background-color: rgb(255, 255, 255) !important;
+    border: 1px solid var(--black);
+}
+
+.fc-col-header-cell-cushion,
+.fc-list-day-text,
+.fc-list-day-side-text {
+    color: var(--black) !important;
+    text-decoration: none;
+    /* font-weight: 100;
+    font-size: 10pt; */
+}
+
+.fc-list-day-cushion,
+.fc-cell-shaded {
+    /* background-color: var(--color) !important; */
+    background-color: var(--color) !important;
+    /* border: 1px solid rgb(0, 0, 0); */
+}
+
+.fc-list-event-dot {
+    border: 5px solid var(--color) !important;
+}
+
+/* Calendar for appointments */
+.fc-scrollgrid {
+    border-style: dashed;
+}
+
+.fc-timegrid-event,
+.fc-v-event,
+.fc-timegrid-event-short,
+.fc-event,
+.fc-event-start,
+.fc-event-end,
+.fc-event-future {
+    background-color: var(--hight-light-color) !important;
+    border-style: none !important;
+    border-radius: 0 !important;
+    color: #000000 !important;
+}
+
+/* Customize the appearance of the "today" day in the month view */
+.fc-day-today {
+    background-color: var(--color) !important;
+    /* border: 10px solid black !important; */
+}
+
+.fc-event-main {
+    background-color: #000000;
+}
+
+/* Border of calendar */
+.fc-theme-standard .fc-scrollgrid {
+    border: 1px solid #ffffff !important;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+    border: 1px solid #ffffff;
+    border-bottom: 1px solid black !important;
+}
+
+/* .fc-scrollgrid-sync-inner {
+    background-color: yellowgreen !important;
+} */
+
+.fc-theme-standard td, .fc-theme-standard th {
+    border-right: 1px solid #ffffff !important;
+}
+
+.fc-list, .fc-list-sticky, .fc-listMonth-view, .fc-view, .fc-scroller {
+    /* border: 1px solid #ffffff !important; */
+    border: none !important;
+}
+
+/* ----------------- */
+/* -Navigation Bar -*/
+/* --------------- */
+ /* --Navbar icon animation-- */
+ /* --------Tutorial-------- */
+.navbar-toggler {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus{
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.navbar-toggler span {
+    margin: 0;
+    padding: 0;
+}
+
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 0;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+/* Navigation button clicked */
+.navbar-toggler .top-bar {
+    margin-top: 0px;
+    transform: rotate(135deg);
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0 );
+}
+
+.navbar-toggler .bottom-bar {
+    margin-top: 0px;
+    transform: rotate(-135deg);
+}
+
+/* Collapsed state of button */
+.navbar-toggler.collapsed .top-bar {
+    margin-top: -20px;
+    transform: rotate(0deg);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    margin-top: 20px;
+    transform: rotate(0deg);
+}

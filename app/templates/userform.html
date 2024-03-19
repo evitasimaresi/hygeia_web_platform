@@ -1,0 +1,42 @@
+<form class="row g-2" method="POST" action="{{url_for(action)}}">
+    {{ form.hidden_tag() }}
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <!-- <span class="input-group-text disabled-btn" id="basic-addon1">user type:</span> -->
+        {% for subfield in form.user_type %}
+        <input type="radio" class="btn-check user-btn" name="user_type" id="{{ subfield.label.text }}" value="{{ subfield._value() }}" autocomplete="off" onchange="toggleSpecialtyfield()">
+        <label class="btn btn-outline-primary user-btn" for="{{ subfield.label.text }}">{{ subfield.label.text}}</label>
+        {% endfor %}
+    </div>
+    <br>
+
+    <!-- {% for error in form.user_type.errors %}
+    <p class="errors">{{ error }}</p>
+    {% endfor %} -->
+
+    <!-- {{ form.username.label }} {{ form.username() }} -->
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="username" aria-label="username" aria-describedby="basic-addon1"
+            placeholder="Username">
+    </div>
+    {% if action == 'register' %}
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="email" aria-label="email" aria-describedby="basic-addon1"
+            placeholder="Email">
+    </div>
+    {% endif %}
+    <div class="input-group mb-3">
+        <input type="password" class="form-control" name="password" aria-label="password" aria-describedby="basic-addon1"
+            placeholder="Password">
+    </div>
+    {% if action == 'register' %}
+    <div class="input-group mb-3">
+        <input type="password" class="form-control" name="confirm_password" aria-label="confirm_password"
+            aria-describedby="basic-addon1" placeholder="Confirm Password">
+    </div>
+    <div id="specialtyfield" style="display: none;">
+        {{ form.specialty(class="form-select", id="specialty", required="") }}
+    </div>
+    {% endif %}
+    <button type="submit" class="btn btn-primary">Connect</button>
+</form>
+

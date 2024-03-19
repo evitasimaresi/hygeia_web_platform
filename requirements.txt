@@ -1,0 +1,13 @@
+# cs50
+Flask
+Flask-Session
+requests
+helpers
+pytz
+Flask-SQLAlchemy
+bardapi
+browser_cookie3s
+python-dotenv
+WTForms
+Flask-WTF
+WTForms-SQLAlchemy

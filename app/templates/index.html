@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+index
+{% endblock %}
+
+{% block main %}
+<!-- <p>You are loged in as {{user}}/{{session_data.user_type}}!</p> -->
+{% if session_data.user_type == 'Patient' %}
+    <p class="welcome-msg">Log your cases and book an appointment with a doctor of you preference. <a class="link" href="{{url_for('chat')}}"> start loging here</a></p>
+{% else %}
+    <p class="welcome-msg">Review your daily schedule and get more information for upcoming appointments.</p>
+{% endif %}
+<br>
+<h1 class="upcoming-text">upcoming appointments</h1>
+<div id="calendar"></div>
+<h4 class="caseInfo">case information</h4>
+<div id="moreInfo"></div>
+<script>
+    var userType = "{{ session_data.user_type }}";
+</script>
+{% endblock %}

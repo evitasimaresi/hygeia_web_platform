@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+history
+{% endblock %}
+
+{% block main %}
+<table class="table table_history">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Description</th>
+            <th scope="col">Feelings</th>
+            <th scope="col">Location</th>
+            <th scope="col">Severity</th>
+            <th class="button_history" scope="col"></th>
+            <th class="th_history" scope="col">Date-time</th>
+            <th class="th_history" scope="col">Doctor</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for case in cases %}
+        <tr id="case-id_{{case.id}}">
+            <th scope="row">{{loop.index}}</th>
+            <td>{{case.description}}</td>
+            <td>{{case.feelings}}</td>
+            <td>{{case.location}}</td>
+            <td>{{case.severity}}</td>
+            <td>
+                {% if case.handled == True %}
+                <a class="btn btn-primary" id="history_button" role="button" onclick="showCaseInfo(this)">Show details</a>
+                {% else %}
+                <a class="btn btn-primary" href="/appointments" role="button">Book appointment</a>
+                {% endif %}
+            </td>
+            <td id="datitme_info_{{case.id}}"></td>
+            <td id="doctor_info_{{case.id}}"></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+<!-- <td>{{ 'Handled' if case.case.handled else 'Unhandled' }}</td> -->

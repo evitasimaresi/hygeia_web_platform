@@ -1,0 +1,53 @@
+To print a response from an AJAX request in your Flask application, you would typically send the response back to the client-side JavaScript, which would then handle updating the DOM with the new content.
+
+Here's a basic example of how you might set this up:
+
+In your Flask route (routes.py), you would return the response as JSON:
+
+from flask import jsonify
+
+@app.route('/chat', methods=['POST'])
+@login_required
+def chat():
+    if request.method == 'POST':
+        symptoms = request.form.get('symptoms')
+        print(f"----------Received: {symptoms}")
+        response_text = sugest_doctor(symptoms)
+        return jsonify(response=response_text)
+On the client-side, you would use JavaScript to send an AJAX request and update the DOM with the response. Here's an example using jQuery:
+
+<!-- Include jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    $("#submit-button").click(function(e) {
+        e.preventDefault();
+        var symptoms = $("#symptoms-input").val();
+        $.ajax({
+            type: "POST",
+            url: "/chat",
+            data: { symptoms: symptoms },
+            success: function(response) {
+                // Update the DOM with the response
+                $("#response-container").text(response.response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+</script>
+
+<!-- Your HTML form -->
+<form id="symptoms-form">
+    <input type="text" id="symptoms-input" name="symptoms">
+    <button type="submit" id="submit-button">Submit</button>
+</form>
+
+<!-- Container to display the response -->
+<div id="response-container"></div>
+In this example, when the submit button is clicked, the JavaScript captures the form submission event, prevents the default form submission, and sends the symptoms to the server via an AJAX POST request. The server processes the symptoms and returns a response, which the JavaScript then uses to update the content of the #response-container div with the response text.
+
+Make sure to adjust the selectors and URLs to match your actual HTML and routing setup.
