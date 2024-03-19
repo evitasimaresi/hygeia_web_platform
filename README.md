@@ -36,7 +36,7 @@ Additionally the following APIs were used:
 ### UX/UI Design
 Originally Figma helped to set a base about the desired design of the user's interface. Later on changes on the structure of the application led to different UI choices.
 
-![ui-ux](/Week10_Emoji/Final_project/project/images/UI-UX.png)
+![ui-ux](/images/UI-UX.png)
 
 ### Directory Structure
 The directory structure is shown on the below figure (1). The specific organization aimed to apply best practices tough during. Furthermore starting from top to bottom:
@@ -46,7 +46,7 @@ The directory structure is shown on the below figure (1). The specific organizat
 * `instance` contains the database and data relative files.
 * `venv` contain the configuration of the virtual environment created to isolate all the dependencies. This directory is excluded from version control.
 
-![Diagram of directories.](/Week10_Emoji/Final_project/project/images/directories_diagramm.png)
+![Diagram of directories.](/images/directories_diagramm.png)
 
 
 ### Component description
@@ -54,7 +54,7 @@ The following section is focused on providing a brief understanding of the core 
 * `__init__.py` initialize the Flask application, it configures the database with SQLAlchemy, set a server session using Flask-session, import the application's routes and finally a function initialize the database if it wasn't already initialized. The `commands.py` work complementary by providing basic logic functionality on the initialization stage of the database. It helps as it organize all relevant functionalities in one file leaving the maintain __init__ file cleaner, functions help to reuse the code and make it modular and basic error handling is giving a proper feedback about the process of initialization.
 * `models.py` the database models are defined using SQLAlchemy, which serve as the core components of the database schema. The classes defined are **User** , **Patient**, **Doctor**, **Specialty**, **Case**, **Appointments** each represent a table in the database, the graphical representation of which is presented on the following figure (2). These classes define the field and relationship between them. Auxiliary class methods include registering new instances and committing them to the tables and serialization of the models converting them into JSON dictionaries. The structure followed gives efficiency in manipulating and retrieving data, improving the overall functionality of the application.
 
-    ![Database schema](/Week10_Emoji/Final_project/project/images/database_schema.png)
+    ![Database schema](/images/database_schema.png)
 
 * `forms.py` define the form classes using Flasf-WTF and WTF forms to handle submissions and validations. Three classes included are the **UserForm**, **Symptoms** and **Appointments** where fields and validators defined to control user’s input. **FlaskForms** are implemented and fields and validators from **wtforms** introduced on top. Form logic and view logic is separate and custom validation in complex validation needs indicate best practices.
 
@@ -103,19 +103,19 @@ In the first use case we will observe Marina. Marina lately is feeling a chest p
 
 1. First she should register as a new user. When she register successfully she will arrive to home page.
 
-    ![register-p](/Week10_Emoji/Final_project/project/images/register-p.gif)
+    ![register-p](/images/register-p.gif)
 
 2. From the home page she can even navigate to chat tab or follow the welcome message to log her case. She fill the form as shown below and by saving the case she will be redirected in the appointments tab.
 
-    ![log-case](/Week10_Emoji/Final_project/project/images/log-case.gif)
+    ![log-case](/images/log-case.gif)
 
 3. Now that her case is logged, she will choose doctor specialty and then choose between the available doctors. From the calendar previewed she will ultimately book an appointment. A message will reminder her the last doctor chosen.
 
-    ![book-appointment](/Week10_Emoji/Final_project/project/images/appointment.gif)
+    ![book-appointment](/images/appointment.gif)
 
 4. Now she can navigate at any moment to home page to review upcoming appointments or to history tab to get a list of all cases logged with all related details.
 
-    ![upcoming-history](/Week10_Emoji/Final_project/project/images/index-history.gif)
+    ![upcoming-history](/images/index-history.gif)
 
 ---
 ### Doctor: Chloe
@@ -123,22 +123,22 @@ In the second case we follow a Cardiologist, Chloe.
 
 1. Chloe wants to register. She has to follow the same method as Marina, but in Chloe's case she should choose `Doctor` and from the top-down menu select her specialty.
 
-    ![register-d](/Week10_Emoji/Final_project/project/images/register-d.gif)
+    ![register-d](/images/register-d.gif)
 
 2. In the future Chloe can login whenever she wants and review her daily schedule. Inspect upcoming appointments with details about the case.
 
-    ![upcoming](/Week10_Emoji/Final_project/project/images/login-uppcoming-d.gif)
+    ![upcoming](/images/login-uppcoming-d.gif)
 
 ---
 ### Error messages
 
 1. Error messages during user authentication guide the user to fix wrong inputs.
 
-    ![error-1](/Week10_Emoji/Final_project/project/images/error-1.gif)
+    ![error-1](/images/error-1.gif)
 
 1. Errors can happen also when the user log new case.
 
-    ![error-2](/Week10_Emoji/Final_project/project/images/error-2.gif)
+    ![error-2](/images/error-2.gif)
 
 
 ## Future improvements:
